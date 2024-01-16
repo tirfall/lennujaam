@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Jaan 16, 2024 kell 09:08 EL
+-- Loomise aeg: Jaan 16, 2024 kell 11:06 EL
 -- Serveri versioon: 10.4.27-MariaDB
 -- PHP versioon: 8.2.0
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `lennujaamkasutaja` (
   `id` int(11) NOT NULL,
-  `nimi` varchar(100) DEFAULT NULL,
+  `kasutaja` varchar(100) DEFAULT NULL,
   `parool` varchar(100) DEFAULT NULL,
   `onAdmin` int(11) DEFAULT 0,
   `onKasutaja` int(11) DEFAULT 0
@@ -39,7 +39,7 @@ CREATE TABLE `lennujaamkasutaja` (
 -- Andmete tõmmistamine tabelile `lennujaamkasutaja`
 --
 
-INSERT INTO `lennujaamkasutaja` (`id`, `nimi`, `parool`, `onAdmin`, `onKasutaja`) VALUES
+INSERT INTO `lennujaamkasutaja` (`id`, `kasutaja`, `parool`, `onAdmin`, `onKasutaja`) VALUES
 (1, 'admin', 'leShwoFF3RG5.', 1, 0);
 
 --
