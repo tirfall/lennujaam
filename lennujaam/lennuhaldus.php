@@ -1,5 +1,10 @@
 <?php
-require("conf.php");
+ob_start();
+if (session_status() == PHP_SESSION_NONE) {
+    // Если сессия еще не стартовала, начинаем её
+    session_start();
+}
+require_once("conf.php");
 global $yhendus;
 if (isset($_REQUEST["kustuta"])) {
     $paring = $yhendus->prepare("DELETE FROM lend WHERE id=?");

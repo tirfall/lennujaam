@@ -1,5 +1,7 @@
 <?php
 session_start();
+ob_start();
 session_destroy();
-header("location: haldusLeht.php");
+header("location: haldusleht.php");
+exit();
 ?>
