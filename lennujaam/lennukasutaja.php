@@ -94,15 +94,23 @@ if(isset($_REQUEST["kustutareisitaja"])){
         $paring->execute();
         while ($paring->fetch())
         {
-            echo "<tr>";
-            echo "<td>$lennu_nr</td>";
-            echo "<td>$reisijate_arv</td>";
-            echo "<td>$ots</td>";
-            echo "<td>$siht</td>";
-            echo "<td>$valjumisaeg</td>";
-            echo "<td><a href='?lisareisitaja=$id'>Lisa reisitaja</a></td>";
-            echo "<td><a href='?kustutareisitaja=$id'>Kustuta reisitaja</a></td>";
-            echo "</tr>";
+            
+            date_default_timezone_set('Europe/Tallinn');
+
+            $currentDateTime = new DateTime(); // Текущая дата и время
+            $valjumisaegDateTime = new DateTime($valjumisaeg); // Дата и время из базы данных
+            $interval = $currentDateTime->diff($valjumisaegDateTime); // Разница во времени
+
+            if ($interval->h >= 1 && $currentDateTime < $valjumisaegDateTime) {
+                echo "<tr>";
+                echo "<td>$lennu_nr</td>";
+                echo "<td>$reisijate_arv</td>";
+                echo "<td>$ots</td>";
+                echo "<td>$siht</td>";
+                echo "<td>$valjumisaeg</td>";
+                echo "<td><a href='?lisareisitaja=$id'>Lisa reisitaja</a><br><a href='?kustutareisitaja=$id'>Kustuta reisitaja</a></td>";
+                echo "</tr>";
+            }
         }
         ?>
     </table>
