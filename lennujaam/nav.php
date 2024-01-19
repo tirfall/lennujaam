@@ -4,7 +4,7 @@
 <nav>
     <ul class="lehed">
             <li><a href="lennuhaldus.php">Admin leht</a></li>
-        <li><a href="haldusLeht.php">Kasutaja leht</a></li>
+        <li><a href="lennukasutaja.php">Kasutaja leht</a></li>
     </ul>
     <ul class="stylelogreg">
         <li>
