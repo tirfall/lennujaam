@@ -8,7 +8,7 @@ require_once("conf.php");
 global $yhendus;
 
 
-$initial_kohtade_arv = 60;
+
 
 if (isset($_REQUEST["kustuta"])) {
     $paring = $yhendus->prepare("DELETE FROM lend WHERE id=?");
@@ -22,24 +22,40 @@ if (isset($_REQUEST["lennu"])){
     $paring->execute();
     header("Location: $_SERVER[PHP_SELF]");
 }
+$nool=0;
 if(isset($_REQUEST["lisareisitaja"])){
-    global $yhendus;
-    $kask=$yhendus->prepare("UPDATE lend SET kohtade_arv=kohtade_arv-1 WHERE id=?");
-    $kask->bind_param("i",$_REQUEST["lisareisitaja"]);
-    $kask->execute();
+    $paring_select = $yhendus->prepare("SELECT reisijate_arv FROM lend WHERE id=?");
+    $paring_select->bind_param("i", $_REQUEST["lisareisitaja"]);
+    $paring_select->execute();
+    $paring_select->bind_result($kohtade_arv_current);
+    $paring_select->fetch();
+    $paring_select->close();
+    if($kohtade_arv_current != $nool) {
+        global $yhendus;
+        $kask=$yhendus->prepare("UPDATE lend SET reisijate_arv=reisijate_arv-1 WHERE id=?");
+        $kask->bind_param("i",$_REQUEST["lisareisitaja"]);
+        $kask->execute();
+    }
+    
 }
 
 if(isset($_REQUEST["kustutareisitaja"])){
-    $paring_select = $yhendus->prepare("SELECT kohtade_arv FROM lend WHERE id=?");
+    $paring_select = $yhendus->prepare("SELECT reisijate_arv FROM lend WHERE id=?");
     $paring_select->bind_param("i", $_REQUEST["kustutareisitaja"]);
     $paring_select->execute();
     $paring_select->bind_result($kohtade_arv_current);
     $paring_select->fetch();
     $paring_select->close();
+    $paring_select = $yhendus->prepare("SELECT kohtade_arv FROM lend WHERE id=?");
+    $paring_select->bind_param("i", $_REQUEST["kustutareisitaja"]);
+    $paring_select->execute();
+    $paring_select->bind_result($initial_kohtade_arv);
+    $paring_select->fetch();
+    $paring_select->close();
 
     // Проверяем, чтобы значение не стало больше изначального
     if ($kohtade_arv_current < $initial_kohtade_arv) {
-        $kask = $yhendus->prepare("UPDATE lend SET kohtade_arv=kohtade_arv+1 WHERE id=?");
+        $kask = $yhendus->prepare("UPDATE lend SET reisijate_arv=reisijate_arv+1 WHERE id=?");
         $kask->bind_param("i", $_REQUEST["kustutareisitaja"]);
         $kask->execute();
         // Дополнительный код, если необходимо выполнить дополнительные действия после выполнения запроса
@@ -65,31 +81,22 @@ if(isset($_REQUEST["kustutareisitaja"])){
     <table id="lennujaam">
         <tr>
         <th>Lennu number</th>
-        <th>Kohtade arv</th>
+        <th>Reisijate arv</th>
         <th>Otskoht</th>
         <th>Sihtkoht</th>
         <th>Väjumisaeg</th>
         <th>Tegevus</th></tr>
-    <form action="" method="post">
-        <tr>
-        <td><input type="text" name="lennu" id="lennu"></td>
-        <td><input type="number" name="kohtarv" id="kohtarv" min="0" max="1000"></td>
-        <td><input type="text" name="ots" id="ots"></td>
-        <td><input type="text" name="siht" id="siht"></td>
-        <td><input type="datetime-local" name="valju" id="valju"></td>
-        <td><input type="submit" value="Lisa"></td>
-        </tr>
-    </form>
+    
         <?php
         global $yhendus;
-        $paring = $yhendus->prepare("SELECT id,lennu_nr,kohtade_arv,ots,siht,valjumisaeg FROM lend");
-        $paring->bind_result($id,$lennu_nr,$kohtade_arv,$ots,$siht,$valjumisaeg);
+        $paring = $yhendus->prepare("SELECT id,lennu_nr,reisijate_arv,ots,siht,valjumisaeg FROM lend");
+        $paring->bind_result($id,$lennu_nr,$reisijate_arv,$ots,$siht,$valjumisaeg);
         $paring->execute();
         while ($paring->fetch())
         {
             echo "<tr>";
             echo "<td>$lennu_nr</td>";
-            echo "<td>$kohtade_arv</td>";
+            echo "<td>$reisijate_arv</td>";
             echo "<td>$ots</td>";
             echo "<td>$siht</td>";
             echo "<td>$valjumisaeg</td>";
