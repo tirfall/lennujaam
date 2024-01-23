@@ -31,23 +31,6 @@ if (isset($_REQUEST["lennu"])) {
 $nool = 0;
 
 // Vähendab reisijate arvu vastavalt päringule
-if (isset($_REQUEST["lisareisitaja"])) {
-    $paring_select = $yhendus->prepare("SELECT reisijate_arv FROM lend WHERE id=?");
-    $paring_select->bind_param("i", $_REQUEST["lisareisitaja"]);
-    $paring_select->execute();
-    $paring_select->bind_result($kohtade_arv_current);
-    $paring_select->fetch();
-    $paring_select->close();
-
-    if ($kohtade_arv_current != $nool) {
-        global $yhendus;
-        $kask = $yhendus->prepare("UPDATE lend SET reisijate_arv=reisijate_arv-1 WHERE id=?");
-        $kask->bind_param("i", $_REQUEST["lisareisitaja"]);
-        $kask->execute();
-    }
-}
-
-// Suurendab reisijate arvu vastavalt päringule
 if (isset($_REQUEST["kustutareisitaja"])) {
     $paring_select = $yhendus->prepare("SELECT reisijate_arv FROM lend WHERE id=?");
     $paring_select->bind_param("i", $_REQUEST["kustutareisitaja"]);
@@ -56,8 +39,24 @@ if (isset($_REQUEST["kustutareisitaja"])) {
     $paring_select->fetch();
     $paring_select->close();
 
+    if ($kohtade_arv_current != $nool) {
+        global $yhendus;
+        $kask = $yhendus->prepare("UPDATE lend SET reisijate_arv=reisijate_arv-1 WHERE id=?");
+        $kask->bind_param("i", $_REQUEST["kustutareisitaja"]);
+        $kask->execute();
+    }
+}
+// Suurendab reisijate arvu vastavalt päringule
+if (isset($_REQUEST["lisareisitaja"])) {
+    $paring_select = $yhendus->prepare("SELECT reisijate_arv FROM lend WHERE id=?");
+    $paring_select->bind_param("i", $_REQUEST["lisareisitaja"]);
+    $paring_select->execute();
+    $paring_select->bind_result($kohtade_arv_current);
+    $paring_select->fetch();
+    $paring_select->close();
+
     $paring_select = $yhendus->prepare("SELECT kohtade_arv FROM lend WHERE id=?");
-    $paring_select->bind_param("i", $_REQUEST["kustutareisitaja"]);
+    $paring_select->bind_param("i", $_REQUEST["lisareisitaja"]);
     $paring_select->execute();
     $paring_select->bind_result($initial_kohtade_arv);
     $paring_select->fetch();
@@ -65,7 +64,7 @@ if (isset($_REQUEST["kustutareisitaja"])) {
 
     if ($kohtade_arv_current < $initial_kohtade_arv) {
         $kask = $yhendus->prepare("UPDATE lend SET reisijate_arv=reisijate_arv+1 WHERE id=?");
-        $kask->bind_param("i", $_REQUEST["kustutareisitaja"]);
+        $kask->bind_param("i", $_REQUEST["lisareisitaja"]);
         $kask->execute();
         $kask->close();
     }
@@ -92,7 +91,7 @@ if (isset($_REQUEST["kustutareisitaja"])) {
         <tr>
             <th>Lennu number</th>
             <th>Reisijate arv</th>
-            <th>Otskoht</th>
+            <th>Väljumiskoht</th>
             <th>Sihtkoht</th>
             <th>Väljumisaeg</th>
 
@@ -123,7 +122,7 @@ if (isset($_REQUEST["kustutareisitaja"])) {
                     echo "<td>$valjumisaeg</td>";
 
                     if (isset($_SESSION['kasutaja'])) {
-                        echo "<td><a href='?lisareisitaja=$id'>Kustuta reisitaja</a><hr><a href='?kustutareisitaja=$id'>Lisa reisitaja</a></td>";
+                        echo "<td><a href='?kustutareisitaja=$id'>Kustuta reisitaja</a><hr><a href='?lisareisitaja=$id'>Lisa reisitaja</a></td>";
                     }
                     echo "</tr>";
                 }
