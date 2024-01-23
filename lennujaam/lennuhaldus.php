@@ -68,7 +68,7 @@ if (isset($_REQUEST["lop"])) {
             <tr>
                 <th>Lennu number</th>
                 <th>Kohtade arv</th>
-                <th>Otskoht</th>
+                <th>Väljumiskoht</th>
                 <th>Sihtkoht</th>
                 <th>Väljumisaeg</th>
                 <th>Lõpetatud</th>
@@ -107,16 +107,17 @@ if (isset($_REQUEST["lop"])) {
                 // Kuvab lõpetamise kuupäeva ja kestvuse, kui lend on lõpetatud
                 if ($lopetatud != "0000-00-00 00:00:00") {
                     echo "<td>$lopetatud</td>";
-                    echo "<td>$kestvus minutit</td>";
+                    $tundid = $kestvus / 60;
+                    echo "<td>$tundid tundit</td>";
                 } else {
-                    echo "<td>Ei ole lõpetanud</td>";
-                    echo "<td>Ei ole lõpetanud</td>";
+                    echo "<td>Lennuk on endiselt õhus</td>";
+                    echo "<td>Lennuk on endiselt õhus</td>";
                 }
 
                 // Kuvab kustutamise ja lõpetamise vormi
                 echo "<td>";
-                echo "<a href='?kustuta=$id'>Kustuta</a> <hr>";
-                echo "<form action=''> <input type='hidden' name='lope' id='lope' value='$id'><input type='hidden' name='aeg' id='aeg' value='$valjumisaeg'><input type='datetime-local' name='lop' id='lop'> <input type='submit' name='lope1' id='lope1' value='Lõpeta'></form>";
+                echo "<a href='?kustuta=$id' class='btnhal'>Kustuta</a> <hr>";
+                echo "<form action='' class='btnhal1'> <input type='hidden' name='lope' id='lope' value='$id'><input type='hidden' name='aeg' id='aeg' value='$valjumisaeg'><input type='datetime-local' name='lop' id='lop'> <input type='submit' name='lope1' id='lope1' value='Lõpeta'></form>";
                 echo "</td></tr>";
             }
             ?>

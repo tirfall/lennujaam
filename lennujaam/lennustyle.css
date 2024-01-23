@@ -83,6 +83,7 @@ td a, th a{
 }
 td a:hover, th a:hover{
     color: black;
+    text-decoration: underline;
 }
 body {
     min-height: 100vh;
@@ -96,11 +97,6 @@ footer {
     margin-top: auto;
 }
 
-.stylelogreg {
-    margin: 0;
-    float: right;
-    padding: 14px 16px;
-}
 ul {
     list-style-type: none;
     margin: 0;
@@ -134,6 +130,11 @@ nav{
     border-bottom: solid 1pt black;
     border-top: solid 1pt black;
     margin-bottom: 5pt;
+}
+.stylelogreg {
+    margin: 0;
+    float: right;
+    padding: 14px 16px;
 }
 .modal{
     display: none; /* Скрыто по умолчанию */
@@ -202,4 +203,15 @@ button{
 button:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+.btnhal1 input[type=submit]{
+    width: 25%;
+}
+.btnhal1{
+    text-align: center;
+}
+.btnhal{
+    position: relative;
+    left: 45%;
+    font-size: 13pt;
 }
