@@ -166,7 +166,7 @@ nav{
     margin: 15% auto; /* 15% сверху и по центру */
     padding: 1%;
     border: 1px solid #888;
-    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+    width: 50%; /* Может быть больше или меньше, в зависимости от размера экрана */
 }
 
 /* Кнопка закрытия */
@@ -214,4 +214,11 @@ button:hover{
     position: relative;
     left: 45%;
     font-size: 13pt;
+}
+.polet{
+    color: red;
+}
+.polet1{
+    color: red;
+    padding: 0;
 }

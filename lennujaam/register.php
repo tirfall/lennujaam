@@ -30,6 +30,10 @@ if (!empty($_POST['register_login']) && !empty($_POST['register_pass'])) {
         $kasutaja_lisamine_kask->bind_param("ss", $login, $kryp);
         $kasutaja_lisamine_kask->execute();
         $kasutaja_lisamine_kask->close();
+        $_SESSION['tuvastamine'] = 'misiganes';
+        $_SESSION['kasutaja'] = $login;
+        // Suunab tavakasutaja lehele
+        header("Location: lennukasutaja.php");
     }
 }
 

@@ -37,8 +37,8 @@ if(isset($_SESSION['kasutaja']))
     </ul>
     <!-- Logi välja nupp -->
     <ul class="stylelogreg">
-        <li>Tere, <?="$_SESSION[kasutaja]"?></li>
-        <li><button onclick="location.href='logout.php';">Logi välja</button></li>
+        Tere, <?="$_SESSION[kasutaja]"?>
+        <button onclick="location.href='logout.php';">Logi välja</button>
     </ul><?php
 }
 else{?>

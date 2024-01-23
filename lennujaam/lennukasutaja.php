@@ -103,8 +103,8 @@ if (isset($_REQUEST["lisareisitaja"])) {
             <?php
             }
             global $yhendus;
-            $paring = $yhendus->prepare("SELECT id, lennu_nr, reisijate_arv, ots, siht, valjumisaeg FROM lend");
-            $paring->bind_result($id, $lennu_nr, $reisijate_arv, $ots, $siht, $valjumisaeg);
+            $paring = $yhendus->prepare("SELECT id, lennu_nr, reisijate_arv,kohtade_arv, ots, siht, valjumisaeg FROM lend");
+            $paring->bind_result($id, $lennu_nr, $reisijate_arv,$koht, $ots, $siht, $valjumisaeg);
             $paring->execute();
 
             while ($paring->fetch()) {
@@ -122,7 +122,21 @@ if (isset($_REQUEST["lisareisitaja"])) {
                     echo "<td>$valjumisaeg</td>";
 
                     if (isset($_SESSION['kasutaja'])) {
-                        echo "<td><a href='?kustutareisitaja=$id'>Kustuta reisitaja</a><hr><a href='?lisareisitaja=$id'>Lisa reisitaja</a></td>";
+                        if($reisijate_arv!=0)
+                        {
+                            echo "<td><a href='?kustutareisitaja=$id'>Kustuta reisitaja</a>";
+                        }
+                        else{
+                            echo "<td class='polet1'>Väärtus on null";
+                        }
+                        echo "<hr>";
+                        if($koht!=$reisijate_arv)
+                        {
+                            echo "<a href='?lisareisitaja=$id'>Lisa reisitaja</a></td>";
+                        }
+                        else{
+                            echo "<p class='polet1'>Maksimaalne väärtus</p>";
+                        }
                     }
                     echo "</tr>";
                 }

@@ -21,9 +21,14 @@ if (isset($_REQUEST["kustuta"])) {
 }
 
 // Lisab uue lennu vastavalt päringule
-if (isset($_REQUEST["lennu"])) {
+if (isset($_REQUEST["lennu"]) && !empty($_REQUEST["lennu"]) && !empty($_REQUEST["ots"]) && !empty($_REQUEST["siht"])) {
     $paring = $yhendus->prepare("INSERT INTO lend (lennu_nr, kohtade_arv, ots, siht, valjumisaeg) VALUES(?,?,?,?,?)");
-    $paring->bind_param("sisss", $_REQUEST["lennu"], $_REQUEST["kohtarv"], $_REQUEST["ots"], $_REQUEST["siht"], $_REQUEST["valju"]);
+    $valju = $_REQUEST["valju"];
+    if(empty($_REQUEST["valju"]))
+    {
+        $valju = date('Y-m-d H:i:s');
+    }
+    $paring->bind_param("sisss", $_REQUEST["lennu"], $_REQUEST["kohtarv"], $_REQUEST["ots"], $_REQUEST["siht"], $valju);
     $paring->execute();
     header("Location: $_SERVER[PHP_SELF]");
 }
@@ -103,15 +108,15 @@ if (isset($_REQUEST["lop"])) {
                 echo "<td>$ots</td>";
                 echo "<td>$siht</td>";
                 echo "<td>$valjumisaeg</td>";
-
+                
                 // Kuvab lõpetamise kuupäeva ja kestvuse, kui lend on lõpetatud
                 if ($lopetatud != "0000-00-00 00:00:00") {
                     echo "<td>$lopetatud</td>";
-                    $tundid = $kestvus / 60;
+                    $tundid = round($kestvus / 60,2);
                     echo "<td>$tundid tundit</td>";
                 } else {
-                    echo "<td>Lennuk on endiselt õhus</td>";
-                    echo "<td>Lennuk on endiselt õhus</td>";
+                    echo "<td class='polet'>Lennuk on endiselt õhus</td>";
+                    echo "<td class='polet'>Lennuk on endiselt õhus</td>";
                 }
 
                 // Kuvab kustutamise ja lõpetamise vormi
