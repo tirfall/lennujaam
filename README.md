@@ -5,4 +5,9 @@
 - [x] Looge süsteem lendude vaatamiseks
 - [x] Lendude lisamiseks looge administraatori leht
 - [x] Teostage registreerimist ja muid väiksemaid funktsioone
-## 
+## Kirjeldus
+Lennujaama projektil on 3 lehekülge: admini leht, kasutaja leht, registreerimata leht. 
+Kasutajalehele saab vaadata lende, mis toimuvad üle tunni aja. Samuti saab kasutaja lisada või vähendada reisijate arvu lennul. Kohtade arvu määrab administraator lennu lisamise ajal. 
+Admini lehel saab administraator lisada lennu. Lennu loomisel määrab administraator väljumisaja, lennu numbri, kohtade arvu, väljumis- ja saabumiskohta. Pärast lennu loomist saab administraator määrata lõppaja või kustutada lennu.
+
+## Koodi ülevaatus
