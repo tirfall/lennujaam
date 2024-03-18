@@ -1,9 +1,10 @@
 # Lennujaam
-##Sisukord
-1. Loojad](https://github.com/tirfall/Arvutid?tab=readme-ov-file#Loojad)
+## Sisukord
+1. [Loojad](https://github.com/tirfall/Arvutid?tab=readme-ov-file#Loojad)
 2. [Projekti eesmärgid](https://github.com/tirfall/Arvutid?tab=readme-ov-file#Loojad)
 3. [Kirjeldus](https://github.com/tirfall/Arvutid?tab=readme-ov-file#Loojad)
-##Loojad
+
+## Loojad
 **Loojad:** @TimurDenisenko ja @tirfall (Aleksander Rogovski) 
 
 ## Projekti eesmärgid
