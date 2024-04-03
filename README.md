@@ -3,9 +3,9 @@
 1. [Loojad](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#loojad)
 2. [Projekti eesmärgid](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#Projekti-eesmärgid)
 3. [Kirjeldus](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#Kirjeldus)
-4. [Lehed] ()
-   -[Kasutaja leht]
-   -[Admini leht]
+4. [Lehed] (https://github.com/tirfall/lennujaam/blob/main/README.md#lehed)
+   -[Kasutaja leht] (https://github.com/tirfall/lennujaam/blob/main/README.md#kasutaja-leht)
+   -[Admini leht] (https://github.com/tirfall/lennujaam/blob/main/README.md#admini-leht)
 
 ## Loojad
 **Loojad:** @TimurDenisenko ja @tirfall (Aleksander Rogovski) 
