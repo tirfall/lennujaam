@@ -4,13 +4,12 @@
 ## Sisukord
 1. [Loojad](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#loojad)
 2. [Projekti eesmärgid](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#Projekti-eesmärgid)
-3. [Kirjeldus](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#Kirjeldus)
-4. [Lehed](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#lehed)
+3. [Lehed](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#lehed)
    - [Kasutaja leht](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#kasutaja-leht)
    - [Registreerimata kasutaja leht](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#registreerimata-kasutaja-leht)
    - [Admini leht](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#admini-leht)
-5. [Logi sisse](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#logi-sisse)
-6. [Registreerimine](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#registreerimine)  
+4. [Logi sisse](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#logi-sisse)
+5. [Registreerimine](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#registreerimine)  
 
 ## Loojad
 **Loojad:** @TimurDenisenko ja @tirfall (Aleksander Rogovski) 
@@ -22,18 +21,12 @@
 - [x] Teostage registreerimist ja muid väiksemaid funktsioone
 <p align="right"><a href="#top">tagasi</a></p>
 
-## Kirjeldus
-Lennujaama projektil on 3 lehekülge: admini leht, kasutaja leht, registreerimata leht. 
-Kasutajalehele saab vaadata lende, mis toimuvad üle tunni aja. Samuti saab kasutaja lisada või vähendada reisijate arvu lennul. Kohtade arvu määrab administraator lennu lisamise ajal. 
-Admini lehel saab administraator lisada lennu. Lennu loomisel määrab administraator väljumisaja, lennu numbri, kohtade arvu, väljumis- ja saabumiskohta. Pärast lennu loomist saab administraator määrata lõppaja või kustutada lennu.
-Registreerimata kasutaja saab vaadata ainult lennugraafikuid ja registreeruda.
-<p align="right"><a href="#top">tagasi</a></p>
-
 ## Lehed
 
 ### Kasutaja leht
 ![image](https://github.com/tirfall/lennujaam/assets/61885744/b95daa8b-9db5-4462-8b95-7ee837aeb203)
 
+Kasutajalehele saab vaadata lende, mis toimuvad üle tunni aja. Samuti saab kasutaja lisada või vähendada reisijate arvu lennul. Kohtade arvu määrab administraator lennu lisamise ajal. 
 <details><summary>Kood</summary>
    
 ```
@@ -195,12 +188,14 @@ if (isset($_REQUEST["lisareisitaja"])) {
 
 ### Registreerimata kasutaja leht
 ![image](https://github.com/tirfall/lennujaam/assets/61885744/dca0e1d2-cab0-4170-9f82-66c1ba663702)
-Registreerimata kasutaja leht
+
+Registreerimata kasutaja saab vaadata ainult lennugraafikuid ja registreeruda.
 <p align="right"><a href="#top">tagasi</a></p>
 
 ### Admini leht
 ![image](https://github.com/tirfall/lennujaam/assets/61885744/8e23a0e3-ee10-4c52-993d-a2a68dffaf8d)
 
+Admini lehel saab administraator lisada lennu. Lennu loomisel määrab administraator väljumisaja, lennu numbri, kohtade arvu, väljumis- ja saabumiskohta. Pärast lennu loomist saab administraator määrata lõppaja või kustutada lennu.
 <details><summary>Kood</summary>
    
 ```
@@ -348,7 +343,7 @@ if (isset($_REQUEST["lop"])) {
 
 ## Logi sisse
 ![image](https://github.com/tirfall/lennujaam/assets/61885744/52c543e4-ee38-4bbd-bd92-c9cf78a84a1a)
-
+PHP kood kontrollib kas kasutaja nimi ja parool on õigesti. Kui kasutaja sisaldab admini nimi ja admini parool, siis avatakse admini leht.
 <details><summary>Kood</summary>
    
 ```
@@ -412,6 +407,7 @@ if (!empty($_POST['login']) && !empty($_POST['pass'])) {
 ## Registreerimine
 ![image](https://github.com/tirfall/lennujaam/assets/61885744/ad75680b-437b-4c92-b03b-5a72521477ed)
 
+PHP kood registreeri kasutaja andmebaasi kui kasutaja sisaldab oma andmed (nimi ja parool).
 <details><summary>Kood</summary>
    
 ```
