@@ -1,4 +1,5 @@
 # Lennujaam
+<a name="top"></a>
 ![image](https://github.com/tirfall/lennujaam/assets/61885744/d1fd9871-a3d7-4b3e-89ee-15523b2b172e)
 ## Sisukord
 1. [Loojad](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#loojad)
@@ -23,7 +24,7 @@ Lennujaama projektil on 3 lehekülge: admini leht, kasutaja leht, registreerimat
 Kasutajalehele saab vaadata lende, mis toimuvad üle tunni aja. Samuti saab kasutaja lisada või vähendada reisijate arvu lennul. Kohtade arvu määrab administraator lennu lisamise ajal. 
 Admini lehel saab administraator lisada lennu. Lennu loomisel määrab administraator väljumisaja, lennu numbri, kohtade arvu, väljumis- ja saabumiskohta. Pärast lennu loomist saab administraator määrata lõppaja või kustutada lennu.
 Registreerimata kasutaja saab vaadata ainult lennugraafikuid ja registreeruda.
-<p align="right"><a href="#readme-top">tagasi</a></p>
+<p align="right"><a href="#top">tagasi</a></p>
 ## Lehed
 
 ### Kasutaja leht
