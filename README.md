@@ -1,6 +1,5 @@
 <a name="top"></a>
 # Lennujaam
-
 ![image](https://github.com/tirfall/lennujaam/assets/61885744/d1fd9871-a3d7-4b3e-89ee-15523b2b172e)
 ## Sisukord
 1. [Loojad](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#loojad)
@@ -15,11 +14,13 @@
 
 ## Loojad
 **Loojad:** @TimurDenisenko ja @tirfall (Aleksander Rogovski) 
+<p align="right"><a href="#top">tagasi</a></p>
 
 ## Projekti eesmärgid
 - [x] Looge süsteem lendude vaatamiseks
 - [x] Lendude lisamiseks looge administraatori leht
 - [x] Teostage registreerimist ja muid väiksemaid funktsioone
+<p align="right"><a href="#top">tagasi</a></p>
 ## Kirjeldus
 Lennujaama projektil on 3 lehekülge: admini leht, kasutaja leht, registreerimata leht. 
 Kasutajalehele saab vaadata lende, mis toimuvad üle tunni aja. Samuti saab kasutaja lisada või vähendada reisijate arvu lennul. Kohtade arvu määrab administraator lennu lisamise ajal. 
@@ -30,10 +31,16 @@ Registreerimata kasutaja saab vaadata ainult lennugraafikuid ja registreeruda.
 
 ### Kasutaja leht
 
+<p align="right"><a href="#top">tagasi</a></p>
 ### Registreerimata kasutaja leht
 
+<p align="right"><a href="#top">tagasi</a></p>
 ### Admini leht
 
+<p align="right"><a href="#top">tagasi</a></p>
 ## Logi sisse
 
+<p align="right"><a href="#top">tagasi</a></p>
 ## Registreerimine
+
+<p align="right"><a href="#top">tagasi</a></p>
