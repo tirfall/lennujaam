@@ -3,6 +3,9 @@
 1. [Loojad](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#loojad)
 2. [Projekti eesmärgid](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#Projekti-eesmärgid)
 3. [Kirjeldus](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#Kirjeldus)
+4. [Lehed] ()
+   -[Kasutaja leht]
+   -[Admini leht]
 
 ## Loojad
 **Loojad:** @TimurDenisenko ja @tirfall (Aleksander Rogovski) 
@@ -17,3 +20,9 @@ Kasutajalehele saab vaadata lende, mis toimuvad üle tunni aja. Samuti saab kasu
 Admini lehel saab administraator lisada lennu. Lennu loomisel määrab administraator väljumisaja, lennu numbri, kohtade arvu, väljumis- ja saabumiskohta. Pärast lennu loomist saab administraator määrata lõppaja või kustutada lennu.
 Registreerimata kasutaja saab vaadata ainult lennugraafikuid ja registreeruda.
 ## Koodi ülevaatus
+
+## Lehed
+
+### Kasutaja leht
+
+### Admini leht
