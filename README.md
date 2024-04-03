@@ -1,4 +1,5 @@
 # Lennujaam
+![image](https://github.com/tirfall/lennujaam/assets/61885744/d1fd9871-a3d7-4b3e-89ee-15523b2b172e)
 ## Sisukord
 1. [Loojad](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#loojad)
 2. [Projekti eesmärgid](https://github.com/tirfall/lennujaam/tree/main?tab=readme-ov-file#Projekti-eesmärgid)
