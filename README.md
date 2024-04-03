@@ -32,15 +32,20 @@ Registreerimata kasutaja saab vaadata ainult lennugraafikuid ja registreeruda.
 ### Kasutaja leht
 
 <p align="right"><a href="#top">tagasi</a></p>
-### Registreerimata kasutaja leht
 
+### Registreerimata kasutaja leht
+![image](https://github.com/tirfall/lennujaam/assets/61885744/dca0e1d2-cab0-4170-9f82-66c1ba663702)
+Registreerimata kasutaja leht
 <p align="right"><a href="#top">tagasi</a></p>
+
 ### Admini leht
 
 <p align="right"><a href="#top">tagasi</a></p>
+
 ## Logi sisse
 
 <p align="right"><a href="#top">tagasi</a></p>
+
 ## Registreerimine
 
 <p align="right"><a href="#top">tagasi</a></p>
