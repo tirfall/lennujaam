@@ -465,7 +465,11 @@ if (!empty($_POST['register_login']) && !empty($_POST['register_pass'])) {
 
 <p align="right"><a href="#top">tagasi</a></p>
 
-##GIT CMD arvestus töö
--lisa css stiili
--muuda php failis
--
+##Ülesanded
+
+-Muutke teksti värv punaseks "Lennuk on õhus", "Väärtus on null" ja "Maksimaalne väärtus".
+-Muutke teksti värv mustaks "Kustuta reisitaja" ja "Lisa reisitaja"
+-Muuda tekst punaseks hiirekursori hõljutamisel administraatori lehel "kustuta"
+-Muutke tabeli ülemise rea taustavärvi. Teie valitud värv
+-Värvige taust footer
+-Administraatorilehel oleva nupu "Lisa" taust muutub roheliseks, kui hõljute kursorit selle kohal
