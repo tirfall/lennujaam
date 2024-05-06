@@ -226,3 +226,7 @@ button:hover{
 .polet:hover , .polet1:hover{
     color: crimson;
 }
+
+a#y2{
+    color: black;
+}
