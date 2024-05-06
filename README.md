@@ -465,7 +465,7 @@ if (!empty($_POST['register_login']) && !empty($_POST['register_pass'])) {
 
 <p align="right"><a href="#top">tagasi</a></p>
 
-##Ülesanded
+## Ülesanded
 
 1. Muutke teksti värv punaseks "Lennuk on õhus", "Väärtus on null" ja "Maksimaalne väärtus".
 2. Muutke teksti värv mustaks "Kustuta reisitaja" ja "Lisa reisitaja"
