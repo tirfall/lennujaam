@@ -222,3 +222,7 @@ button:hover{
     color: red;
     padding: 0;
 }
+
+.polet:hover , .polet1:hover{
+    color: crimson;
+}
