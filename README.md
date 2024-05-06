@@ -464,3 +464,8 @@ if (!empty($_POST['register_login']) && !empty($_POST['register_pass'])) {
 </details>
 
 <p align="right"><a href="#top">tagasi</a></p>
+
+##GIT CMD arvestus töö
+-lisa css stiili
+-muuda php failis
+-
