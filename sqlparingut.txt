@@ -1,1 +1,0 @@
-INSERT INTO `lennujaamkasutaja` (`id`, `nimi`, `parool`, `onAdmin`, `onKasutaja`) VALUES (NULL, 'admin', 'leShwoFF3RG5.', '1', '0');s
