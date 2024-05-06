@@ -1,0 +1,224 @@
+#lennujaam {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#lennujaam td, #lennujaam th {
+    border: 1px solid gray;
+    padding: 8px;
+    height: 25pt;
+}
+
+#lennujaam tr:nth-child(even){background-color: #f2f2f2;}
+
+#lennujaam tr:hover {background-color: #ddd;}
+
+#lennujaam th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: cornflowerblue;
+    color: white;
+    width: auto;
+}
+
+input[type=text],input[type=number],input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: darkgray;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+input[type=datetime-local] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 30pt;
+}
+
+.text {
+    position: absolute;
+    top: -420pt;
+    left: -300pt;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 20%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+}
+
+img, svg {
+    overflow: visible;
+}
+
+td a, th a{
+    text-decoration: none;
+    color: gray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+td a:hover, th a:hover{
+    color: black;
+    text-decoration: underline;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    border-top: solid 1pt black;
+    font-family: Arial;
+    font-size: 10pt;
+    margin-top: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 16px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+    color: white;
+}
+nav{
+    font-family: Arial;
+    font-size: 13pt;
+    margin-top: 1%;
+    overflow: hidden;
+    background: transparent;
+    border-bottom: solid 1pt black;
+    border-top: solid 1pt black;
+    margin-bottom: 5pt;
+}
+.stylelogreg {
+    margin: 0;
+    float: right;
+    padding: 14px 16px;
+}
+.modal{
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+.modal1 {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+/* Модальное содержание/коробка */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 1%;
+    border: 1px solid #888;
+    width: 50%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Кнопка закрытия */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close1 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    font-family: Arial;
+    font-size: 13pt;
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    border: solid transparent;
+}
+button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.btnhal1 input[type=submit]{
+    width: 25%;
+}
+.btnhal1{
+    text-align: center;
+}
+.btnhal{
+    position: relative;
+    left: 45%;
+    font-size: 13pt;
+}
+.polet{
+    color: red;
+}
+.polet1{
+    color: red;
+    padding: 0;
+}
