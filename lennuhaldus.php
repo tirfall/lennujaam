@@ -91,7 +91,7 @@ if (isset($_REQUEST["lop"])) {
                     <td><input type="datetime-local" name="valju" id="valju"></td>
                     <td></td>
                     <td></td>
-                    <td><input type="submit" value="Lisa"></td>
+                    <td><input type="submit" id="lisavarvhover" value="Lisa"></td>
                 </tr>
             </form>
 

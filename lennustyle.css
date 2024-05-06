@@ -208,6 +208,10 @@ button:hover{
 .btnhal1 input[type=submit]{
     width: 25%;
 }
+
+#lisavarvhover:hover{
+    background-color: #00e600;
+}
 .btnhal1{
     text-align: center;
 }
