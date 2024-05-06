@@ -467,9 +467,9 @@ if (!empty($_POST['register_login']) && !empty($_POST['register_pass'])) {
 
 ##Ülesanded
 
--Muutke teksti värv punaseks "Lennuk on õhus", "Väärtus on null" ja "Maksimaalne väärtus".
--Muutke teksti värv mustaks "Kustuta reisitaja" ja "Lisa reisitaja"
--Muuda tekst punaseks hiirekursori hõljutamisel administraatori lehel "kustuta"
--Muutke tabeli ülemise rea taustavärvi. Teie valitud värv
--Värvige taust footer
--Administraatorilehel oleva nupu "Lisa" taust muutub roheliseks, kui hõljute kursorit selle kohal
+1. Muutke teksti värv punaseks "Lennuk on õhus", "Väärtus on null" ja "Maksimaalne väärtus".
+2. Muutke teksti värv mustaks "Kustuta reisitaja" ja "Lisa reisitaja"
+3. Muuda tekst punaseks hiirekursori hõljutamisel administraatori lehel "kustuta"
+4. Muutke tabeli ülemise rea taustavärvi. Teie valitud värv
+5. Värvige taust footer
+6. Administraatorilehel oleva nupu "Lisa" taust muutub roheliseks, kui hõljute kursorit selle kohal
