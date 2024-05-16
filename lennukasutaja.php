@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // Lisab konfiguratsioonifaili
-require_once("conf.php");
+require_once("conf-sash.php");
 
 // Ühenduse loomine andmebaasiga
 global $yhendus;

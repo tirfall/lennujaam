@@ -1,5 +1,5 @@
 <?php
-require_once("conf.php");
+require_once("conf-sash.php");
 
 // Ühenduse loomine andmebaasiga
 global $yhendus;
