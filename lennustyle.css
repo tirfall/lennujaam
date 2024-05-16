@@ -237,7 +237,7 @@ a#y2{
 }
 
 .btnhal:hover{
-    color: red;
+    color: red; /*siin on juba punane*/
 }
 
 .red-text {
