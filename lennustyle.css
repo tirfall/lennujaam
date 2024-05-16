@@ -239,3 +239,7 @@ a#y2{
 .btnhal:hover{
     color: red;
 }
+
+.red-text {
+    color: red;
+}
