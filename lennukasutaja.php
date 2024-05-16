@@ -124,7 +124,7 @@ if (isset($_REQUEST["lisareisitaja"])) {
                     if (isset($_SESSION['kasutaja'])) {
                         if($reisijate_arv!=0)
                         {
-                            echo "<td><a id='y2' href='?kustutareisitaja=$id'>Kustuta reisitaja</a>";
+                            echo "<td><a id='y2' href='?kustutareisitaja=$id'><span class='black-text'>Kustuta reisitaja</span></a>";
                         }
                         else{
                             echo "<td class='red-text'>Väärtus on null</td>";
@@ -132,7 +132,7 @@ if (isset($_REQUEST["lisareisitaja"])) {
                         echo "<hr>";
                         if($koht!=$reisijate_arv)
                         {
-                            echo "<a id='y2' href='?lisareisitaja=$id'>Lisa reisitaja</a></td>";
+                            echo "<a id='y2' href='?lisareisitaja=$id'><span class='black-text'>Lisa reisitaja</span></a></td>";
                         }
                         else{
                             echo "<p class='red-text'>Maksimaalne väärtus</p>";
